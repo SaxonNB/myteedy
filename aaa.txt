@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/cs/Desktop/yolov5/detect.py", line 312, in <module>
+    main(opt)
+  File "/home/cs/Desktop/yolov5/detect.py", line 307, in main
+    run(**vars(opt))
+  File "/home/cs/miniforge3/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/cs/Desktop/yolov5/detect.py", line 115, in run
+    model = DetectMultiBackend(weights, device=device, dnn=dnn, data=data, fp16=half)
+  File "/home/cs/Desktop/yolov5/models/common.py", line 467, in __init__
+    model = attempt_load(weights if isinstance(weights, list) else w, device=device, inplace=True, fuse=fuse)
+  File "/home/cs/Desktop/yolov5/models/experimental.py", line 98, in attempt_load
+    ckpt = torch.load(attempt_download(w), map_location="cpu")  # load
+  File "/home/cs/miniforge3/lib/python3.10/site-packages/torch/serialization.py", line 1040, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "/home/cs/miniforge3/lib/python3.10/site-packages/torch/serialization.py", line 1262, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+_pickle.UnpicklingError: invalid load key, '4'.
